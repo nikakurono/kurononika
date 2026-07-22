@@ -12,7 +12,12 @@
     display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px;
   }
   .fa-item{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+  }
+  .fa-item .fa-thumb{
     aspect-ratio:1/1;
+    display:block;
+    width:100%;
     border:3px solid var(--ink);
     border-radius:20px;
     overflow:hidden;
@@ -23,6 +28,21 @@
     width:100%; height:100%; object-fit:contain; display:block;
     cursor:zoom-in;
   }
+  .fa-credit{
+    font-family:'Baloo 2'; font-weight:700; font-size:14px;
+    text-align:center; padding:8px 20px;
+    border:3px solid var(--ink);
+    border-radius:999px;
+    background:var(--sun);
+    text-decoration:none; color:#000000;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .fa-credit:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:4px 6px 0 rgba(0,0,0,0.18);
+  }
+  .fa-credit.no-link{ cursor:default; }
+  .fa-credit.no-link:hover{ transform:none; box-shadow:none; }
   .lightbox{
     position:fixed; inset:0; z-index:100;
     background:rgba(36,27,47,0.88);
@@ -70,31 +90,110 @@
 
   <section id="fa" style="padding-top:20px;">
     <div class="fa-grid">
-      <div class="fa-item"><img src="fa-01.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-02.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-03.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-04.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-05.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-06.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-07.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-08.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-09.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-10.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-11.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-12.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-13.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-14.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-15.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-16.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-17.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-18.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-19.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-20.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-21.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-22.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-23.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-24.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
-      <div class="fa-item"><img src="fa-25.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-01.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/pppinkc" target="_blank" rel="noopener">るぴさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-02.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/2525become" target="_blank" rel="noopener">桜空リリィさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-03.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/akira729_Illust" target="_blank" rel="noopener">あきらさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-04.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/lapin_itigo" target="_blank" rel="noopener">ラパンちゃん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-05.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/shiu_45" target="_blank" rel="noopener">紫羽さん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-06.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/shiu_45" target="_blank" rel="noopener">紫羽さん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-07.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/KMchamaV" target="_blank" rel="noopener">かみちゃまさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-08.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/ssy_onnanokoe" target="_blank" rel="noopener">ssyさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-09.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/gu0v0" target="_blank" rel="noopener">天乃ぐらさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-10.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/fukameekaki337" target="_blank" rel="noopener">ふかみみさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-11.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/fukameekaki337" target="_blank" rel="noopener">ふかみみさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-12.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/shiu_45" target="_blank" rel="noopener">紫羽さん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-13.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/shiu_45" target="_blank" rel="noopener">紫羽さん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-14.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/monogusaR_jiro" target="_blank" rel="noopener">じろうさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-15.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/monogusaR_jiro" target="_blank" rel="noopener">じろうさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-16.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/usako0000000" target="_blank" rel="noopener">usatanienさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-17.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/_ucha_ucha" target="_blank" rel="noopener">うちゃさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-18.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/shiu_45" target="_blank" rel="noopener">紫羽さん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-19.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/onikusika_katan" target="_blank" rel="noopener">死者蘇生さん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-20.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/kirisamev55" target="_blank" rel="noopener">きりさめさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-21.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/kirisamev55" target="_blank" rel="noopener">きりさめさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-22.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/kirisamev55" target="_blank" rel="noopener">きりさめさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-23.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/kirisamev55" target="_blank" rel="noopener">きりさめさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-24.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/mazikihiziki" target="_blank" rel="noopener">マジキさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-25.png" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/kirisamev55" target="_blank" rel="noopener">きりさめさん</a>
+      </div>
+      <div class="fa-item">
+        <div class="fa-thumb"><img src="fa-26.jpg" alt="ファンアート" onclick="openLightbox(this.src)"></div>
+        <a class="fa-credit" href="https://x.com/kirisamev55" target="_blank" rel="noopener">きりさめさん</a>
+      </div>
     </div>
   </section>
 
